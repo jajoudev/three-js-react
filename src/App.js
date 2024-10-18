@@ -61,9 +61,9 @@ function App() {
       sphere.rotation.x += 0.01;
       sphere.rotation.y += 0.01;
 
-      stars.rotation.y += 0.00001;
-      stars.rotation.x += 0.00001;
-      stars.rotation.z += 0.00001;
+      stars.rotation.y += 0.0001;
+      stars.rotation.x += 0.0001;
+      stars.rotation.z += 0.0001;
 
       renderer.render(scene, camera);
     }
