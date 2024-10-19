@@ -37,13 +37,15 @@ function App() {
 
     const starsMaterial = new THREE.PointsMaterial({
       color: 0xffffff,
+      size: 0,
+      sizeAttenuation: true,
     });
 
     const stars = new THREE.Points(starsGeometry, starsMaterial);
     scene.add(stars);
 
     const geometry = new THREE.SphereGeometry(15, 32, 16);
-    const material = new THREE.MeshStandardMaterial({ color: 0x00008B});
+    const material = new THREE.MeshStandardMaterial({ color: 0x00008b });
     const sphere = new THREE.Mesh(geometry, material);
     scene.add(sphere);
 
@@ -61,9 +63,9 @@ function App() {
       sphere.rotation.x += 0.01;
       sphere.rotation.y += 0.01;
 
-      stars.rotation.y += 0.0001;
-      stars.rotation.x += 0.0001;
-      stars.rotation.z += 0.0001;
+      stars.rotation.y += 0.000015;
+      stars.rotation.x += 0.000015;
+      stars.rotation.z += 0.000015;
 
       renderer.render(scene, camera);
     }
